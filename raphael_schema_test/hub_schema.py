@@ -1,4 +1,4 @@
-from datajoint.schema import Schema
+from datajoint.schemas import Schema
 from datajoint.user_tables import Manual
 
 target = Schema('hub')

@@ -17,7 +17,7 @@ setuptools.setup(
     description="Official DataJoint Test Schema plugin.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/guzman-raphael/djpyplugin_adapted_graph",
+    url="https://github.com/guzman-raphael/djpyplugin_schema_test",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -28,6 +28,8 @@ setuptools.setup(
     install_requires=['datajoint'],
     privkey_path='~/keys/datajoint-dev.pem',
     entry_points={
-        'datajoint.plugins': 'schema = {}'.format(pkg_name)
+        'datajoint_plugins.schema': [
+            'hub = {}.hub_schema:target'.format(pkg_name),
+        ],
     },
 )

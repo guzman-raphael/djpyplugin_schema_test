@@ -1,7 +1,7 @@
-from datajoint.schema import create_virtual_module
+from datajoint.schemas import VirtualModule
 from . import hub_schema
 
-hub = create_virtual_module(
+hub = VirtualModule(
     'virtual_module',
     'hub',
     create_schema=True,

@@ -1,5 +1,5 @@
-from datajoint.plugin import discovered_plugins
+from datajoint.plugin import schema_plugins
 
 
 def test_check_plugin_status():
-    assert(discovered_plugins['raphael_adapted_graph']['verified'])
+    assert(schema_plugins['raphael_adapted_graph']['verified'])
